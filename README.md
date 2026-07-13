@@ -49,6 +49,7 @@ curl -fsSL [https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.s
 --------------------------------
 配置文件: /opt/nezha/agent/config.yml
 server: nezha.example.com:443
+uuid: xxx-xxx-xxx
 
 =================================
             安全修复
@@ -60,6 +61,14 @@ server: nezha.example.com:443
 
 🟢 保留标准主进程 PID=12345
 ✅ nezha-agent 服务重启成功
+
+=================================
+            配置复查
+=================================
+WebSSH 最终防护状态:
+--------------------------------
+文件路径: /opt/nezha/agent/config.yml
+🔒 安全状态: 已禁用远程命令执行 (WebSSH 已关闭)
 
 ---
 
