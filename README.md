@@ -32,45 +32,4 @@ NezhaJin Security Tool 旨在帮助运维人员一键切断此高危权限，同
 只需在您的 Linux 服务器（支持 Debian/Ubuntu/CentOS）上以 **root** 用户执行以下纯净命令：
 
 ```bash
-curl -fsSL https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh | bash
-
-# 🖥️ 运行效果预览
-=================================
-       NezhaJin Security Tool
-         Created by maijiamei
-           Version 1.2.0
-=================================
-
-[1] 检查运行中的 Agent ...
-[2] 搜索配置文件 ...
---------------------------------
-配置文件: /opt/nezha/agent/config.yml
-server: nezha.example.com:443
-uuid: xxx-xxx-xxx
-
-=================================
-            安全修复
-=================================
-是否关闭所有 Agent 的 WebSSH 命令执行? [y/N]: y
-✅ 已修改: /opt/nezha/agent/config.yml
-
-是否清理多余 Nezha Agent 服务? [y/N]: y
-
-🟢 保留标准主进程 PID=12345
-✅ nezha-agent 服务重启成功
-
-=================================
-            配置复查
-=================================
-WebSSH 最终防护状态:
---------------------------------
-文件路径: /opt/nezha/agent/config.yml
-🔒 安全状态: 已禁用远程命令执行 (WebSSH 已关闭)
-
-# 🛡️ 安全承诺
-纯本地轻量脚本：本工具绝不包含任何网络上传、商业打点、下载第三方未知二进制文件、或修改系统 root 密码等恶意行为。
-
-透明开源：欢迎随时审计 nezhajin.sh 源码。
-
-# 📄 开源协议
-本项目基于 MIT License 协议开源。欢迎 Fork 并提交 Pull Request 共同完善！
+curl -fsSL [https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh](https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh) | bash
