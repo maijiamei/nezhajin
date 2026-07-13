@@ -2,13 +2,16 @@
 
 一款专为哪吒监控（Nezha Agent）打造的自动化安全加固与系统清理一键脚本。
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Platform: Linux](https://img.shields.io/badge/Platform-Linux-blue.svg)](https://www.linux.org/)
+
 ---
 
 ## 💡 为什么需要这个工具？
 
-哪吒监控默认开启了 WebSSH（远程命令执行）功能。虽然方便，但如果您的哪吒面板管理端遭遇黑客攻击、弱口令爆破或遭遇凭证泄露，黑客可以通过面板直接反向远控您的服务器（拥有 root 权限）。
+哪吒监控默认开启了 **WebSSH（远程命令执行）** 功能。虽然方便，但如果您的哪吒面板管理端遭遇黑客攻击、弱口令爆破或遭遇凭证泄露，黑客可以通过面板直接反向远控您的服务器（拥有 root 权限）。
 
-NezhaJin Security Tool 旨在帮助运维人员一键切断此高危权限，同时清理系统中可能存在的残留进程和垃圾服务，实现“纯监控、无远控”的安全隔离状态。
+**NezhaJin Security Tool** 旨在帮助运维人员一键切断此高危权限，同时清理系统中可能存在的残留进程和垃圾服务，实现“纯监控、无远控”的安全隔离状态。
 
 ---
 
@@ -19,14 +22,14 @@ NezhaJin Security Tool 旨在帮助运维人员一键切断此高危权限，同
 * **[3] WebSSH 一键切断**：提供交互式选项，一键将配置修改为 `disable_command_execute: true`，彻底屏蔽面板端的远程命令执行。
 * **[4] 残留服务与进程清理**：
     * 自动识别并停用非标准的哪吒变体服务（防偷鸡、防后门）。
-    * 比对 systemd 主进程 MainPID，强杀所有死灰复燃的孤儿残留进程。
+    * 比对 systemd 主进程 `MainPID`，强杀（kill）所有死灰复燃的孤儿残留进程。
 * **[5] 平滑重启复查**：自动重载服务并重启标准 Agent，并在尾部直观反馈最终的安全防护状态。
 
 ---
 
 ## 🚀 如何使用（一键运行）
 
-只需在您的 Linux 服务器（支持 Debian/Ubuntu/CentOS）上以 **root** 用户执行以下纯净命令：
+只需在您的 Linux 服务器（支持 Debian/Ubuntu/CentOS）上以 **root** 用户执行以下命令：
 
 ```bash
 curl -fsSL [https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh](https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh) | bash
