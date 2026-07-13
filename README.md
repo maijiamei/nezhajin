@@ -32,7 +32,7 @@
 只需在您的 Linux 服务器（支持 Debian/Ubuntu/CentOS）上以 **root** 用户执行以下命令：
 
 ```bash
-curl -fsSL [https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh](https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh) | bash
+curl -fsSL https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh | bash
 ```
 
 ---
