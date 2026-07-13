@@ -33,6 +33,7 @@
 
 ```bash
 curl -fsSL [https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh](https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh) | bash
+```
 
 ---
 
