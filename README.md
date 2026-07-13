@@ -14,22 +14,22 @@ NezhaJin Security Tool 旨在帮助运维人员一键切断此高危权限，同
 
 ## 🛠️ 核心功能
 
-* [1] 进程多维度排查：自动扫描系统内所有带有 nezha-agent 标识的活跃进程。
-* [2] 配置文件盲搜：深度遍历 /opt、/etc、/root 等目录，精准定位哪吒的 .yml/.yaml 配置文件，并展示当前通信服务器及远控开关状态。
-* [3] WebSSH 一键切断：提供交互式选项，一键将配置修改为 disable_command_execute: true，彻底屏蔽面板端的远程命令执行。
-* [4] 残留服务与进程清理：
+* **[1] 进程多维度排查**：自动扫描系统内所有带有 `nezha-agent` 标识的活跃进程。
+* **[2] 配置文件盲搜**：深度遍历 `/opt`、`/etc`、`/root` 等目录，精准定位哪吒的 `.yml/.yaml` 配置文件，并展示当前通信服务器及远控开关状态。
+* **[3] WebSSH 一键切断**：提供交互式选项，一键将配置修改为 `disable_command_execute: true`，彻底屏蔽面板端的远程命令执行。
+* **[4] 残留服务与进程清理**：
     * 自动识别并停用非标准的哪吒变体服务（防偷鸡、防后门）。
     * 比对 systemd 主进程 MainPID，强杀所有死灰复燃的孤儿残留进程。
-* [5] 平滑重启复查：自动重载服务并重启标准 Agent，并在尾部直观反馈最终的安全防护状态。
+* **[5] 平滑重启复查**：自动重载服务并重启标准 Agent，并在尾部直观反馈最终的安全防护状态。
 
 ---
 
 ## 🚀 如何使用（一键运行）
 
-只需在您的 Linux 服务器（支持 Debian/Ubuntu/CentOS）上以 root 用户执行以下纯净命令：
+只需在您的 Linux 服务器（支持 Debian/Ubuntu/CentOS）上以 **root** 用户执行以下纯净命令：
 
-==> 复制下方这行命令到终端运行：
-curl -fsSL https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh | bash
+```bash
+curl -fsSL [https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh](https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh) | bash
 
 ---
 
