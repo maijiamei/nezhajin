@@ -1,3 +1,6 @@
+你可以直接点击这个框右上角的复制按钮，把它整段粘贴到 GitHub 的 README.md 编辑器中：
+
+Plaintext
 # 🦁 NezhaJin Security Tool
 
 一款专为哪吒监控（Nezha Agent）打造的自动化安全加固与系统清理一键脚本。
@@ -33,3 +36,45 @@ NezhaJin Security Tool 旨在帮助运维人员一键切断此高危权限，同
 
 ```bash
 curl -fsSL [https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh](https://github.com/maijiamei/nezhajin/raw/refs/heads/main/nezhajin.sh) | bash
+🖥️ 运行效果预览
+Plaintext
+=================================
+       NezhaJin Security Tool
+         Created by maijiamei
+           Version 1.2.0
+=================================
+
+[1] 检查运行中的 Agent ...
+[2] 搜索配置文件 ...
+--------------------------------
+配置文件: /opt/nezha/agent/config.yml
+server: nezha.example.com:443
+uuid: xxx-xxx-xxx
+
+=================================
+            安全修复
+=================================
+是否关闭所有 Agent 的 WebSSH 命令执行? [y/N]: y
+已修改:
+/opt/nezha/agent/config.yml
+
+是否清理多余 Nezha Agent 服务? [y/N]: y
+
+保留主 Agent PID=12345
+nezha-agent 重启成功
+
+=================================
+              完成
+=================================
+当前 Agent:
+root     12345  0.1  0.2 ... nezha-agent
+
+WebSSH 状态:
+disable_command_execute: true
+🛡️ 安全承诺
+纯本地轻量脚本：本工具绝不包含任何网络上传、商业打点、下载第三方未知二进制文件、或修改系统 root 密码等恶意行为。
+
+透明开源：欢迎随时审计 nezhajin.sh 源码。
+
+📄 开源协议
+本项目基于 MIT License 协议开源。欢迎 Fork 并提交 Pull Request 共同完善！
